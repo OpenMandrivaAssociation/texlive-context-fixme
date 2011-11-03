@@ -1,3 +1,9 @@
+# revision 23167
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-fixme
+# catalog-date 2009-11-09 14:23:31 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-context-fixme
 Version:	20091109
 Release:	1
@@ -45,6 +51,7 @@ summaries by mark type.
 %doc %{_texmfdistdir}/doc/context/third/fixme/fixme.pdf
 #- source
 %doc %{_texmfdistdir}/source/context/third/fixme/doc/fixme.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +62,5 @@ summaries by mark type.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
