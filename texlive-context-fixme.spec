@@ -19,30 +19,17 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The module will create a variety of marks, and produce
 summaries by mark type.
 
-%pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -51,7 +38,6 @@ summaries by mark type.
 %doc %{_texmfdistdir}/doc/context/third/fixme/fixme.pdf
 #- source
 %doc %{_texmfdistdir}/source/context/third/fixme/doc/fixme.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,5 +48,3 @@ summaries by mark type.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
