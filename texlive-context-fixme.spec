@@ -48,3 +48,17 @@ summaries by mark type.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091109-2
++ Revision: 750494
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091109-1
++ Revision: 718129
+- texlive-context-fixme
+- texlive-context-fixme
+- texlive-context-fixme
+- texlive-context-fixme
+
