@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-fixme
 Version:	20130304
-Release:	6
+Release:	7
 Summary:	Make editorial marks on a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-fixme
