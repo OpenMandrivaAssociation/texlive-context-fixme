@@ -9,7 +9,7 @@ Version:	20130304
 Release:	11
 Summary:	Make editorial marks on a document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-fixme
+URL:		https://www.ctan.org/tex-archive/macros/context/contrib/context-fixme
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-fixme.tar.xz
 BuildArch:	noarch
